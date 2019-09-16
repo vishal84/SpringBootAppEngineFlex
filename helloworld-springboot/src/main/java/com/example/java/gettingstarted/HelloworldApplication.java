@@ -16,18 +16,11 @@
 
 package com.example.java.gettingstarted;
 
-import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -66,18 +59,6 @@ public class HelloworldApplication {
     // Message body required though ignored
     return "Still ticking...!";
   }
-
-  /**
-   * Return the # of headers present
-   */
-  /* @RequestMapping("/headers")
-  public ResponseEntity<String> listAllHeaders(@RequestHeader Map<String, String> headers) {
-      headers.forEach((key, value) -> {
-        LOG.info(String.format("Header '%s' = %s", key, value));
-      });
-  
-      return new ResponseEntity<String>(String.format("Listed %d headers", headers.size()), HttpStatus.OK);
-  } */
 
   public static void main(String[] args) {
     SpringApplication.run(HelloworldApplication.class, args);
