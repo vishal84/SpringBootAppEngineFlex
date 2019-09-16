@@ -1,0 +1,12 @@
+.vscode/settings.json
+helloworld-springboot/.classpath
+.project
+helloworld-springboot/.project
+helloworld-springboot/.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.core.resources.prefs
+helloworld-springboot/.settings/org.eclipse.core.resources.prefs
+helloworld-springboot/.settings/org.eclipse.jdt.apt.core.prefs
+helloworld-springboot/.project
+helloworld-springboot/target/test-classes/com/example/java/gettingstarted/it/HelloWorldApplicationIT.class
+helloworld-springboot/target/classes/com/example/java/gettingstarted/HelloworldApplication.class
