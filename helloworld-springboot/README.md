@@ -67,14 +67,14 @@ gcloud components update
 ### Configure the `app.yaml` descriptor
 
 The [`app.yaml`][app-yaml] descriptor is used to describe URL
-dispatch and resource requirements. These settings should be revisited based on your requirements.
+dispatch and resource requirements. These settings should be revised based on your requirements.
 
 [app-yaml]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml
 [manual-scaling]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml#manual-scaling
 
 ### Configure the `app-engine-maven` plugin parameters for App Engine in the `pom.xml` file
 
-The [`pom.xml`][pom.xml] file in this directory references the `app-engine-maven` plugin. Update the `<deploy.projectId>` and the `<deploy.version>` tags to values that correspond to your project and the version number you want to deploy to respectively.
+The [`pom.xml`](pom.xml) file in this directory references the `app-engine-maven` plugin. Update the `<deploy.projectId>` and the `<deploy.version>` tags to values that correspond to your project and the version number you want to deploy to respectively.
 
 ## Run the application locally
 
