@@ -74,8 +74,8 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>${appengine.maven.plugin}</version>
         <configuration>
-          <deploy.projectId>kube-hybrid</deploy.projectId>
-          <deploy.version>2</deploy.version>
+          <deploy.projectId>{CHANGE TO YOUR GCP PROJECT}</deploy.projectId>
+          <deploy.version>{CHANGE TO VERSION OF APP ENGINE FLEX APP}</deploy.version>
         </configuration>
       </plugin>
 <!-- END plugin -->
