@@ -100,6 +100,28 @@ Once created, your application is assigned an API key and secret. You can find t
 
 6. Click `Show` next to the `Key` and copy the value to use at a later time.
 
+### Test the integration using Trace
+
+We will now test that the integration is working as expected:
+1. Navigate to `Developer > Shared Flows` in the left menu.
+2. Select the `GCP-Auth` shared flow.
+3. On the `Overview` tab select `Deployment` then choose `test`.
+4. Click `Deploy` on the modal popup window that appears next.
+
+Next we need to deploy the proxy and switch over to the `Trace` tab:
+1. Navigate to `Develop > API Proxies` in the left menu.
+2. Select the `SpringBoot` proxy.
+3. On the `Overview` page, select the `Deployment` dropdown and choose `test`.
+4. Click `Deploy`.
+5. Switch to the `Trace` tab of the proxy and click the `Start Trace Session` button.
+6. In the input box for the GET endpoint add the following:
+    * ?apikey=((API KEY COPIED FROM EARLIER))
+7. Press send a few times and verify that you are receiving 200 responses back.
+
+Your trace view should look similar to the following image:
+    ![image alt text](./media/trace-view.png)
+
+
 ### Apigee Community
 If you have any questions/comments please visit https://community.apigee.com/index.html
 
