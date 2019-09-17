@@ -31,6 +31,9 @@ For the following steps, please log in to your Apigee Edge account.
 3. Select the `GCP-Auth_rev3_2019_09_17.zip` zip archive.
 4. Set the `Name:` to `GCP-Auth` and select `Create`.
 
+### Enable and configure Google Cloud Identity Aware Proxy (IAP)
+
+
 ### Create a Key Value Map
 The shared flow imported leverages a Key Value Map (KVM) to lookup values associated with your GCP project.  We will create a KVM in the following steps and set values for the service account and OAuth Client Credentials we will require for this example.
 
@@ -40,6 +43,19 @@ The shared flow imported leverages a Key Value Map (KVM) to lookup values associ
 4. Once created, select the `GCP IAM` key value map by clicking on it.
 5. In the `GCP IAM` key value map screen enter in the following key/values. You will need to click on the `+` icon in the top right of the screen to add these values individually.
 
+    * jwt_issuer: set this value to the `client_email` found in the service account JSON file downloaded from your GCP project.  You can download the service account JSON file from the `APIs & Services > Credentials` section of your GCP project.
+    ![image alt text](./media/api-credentials.png)
+    
+    * private_key_PEM: set this value to the `private_key` value found in the service account JSON file downloaded from your GCP project.  Please also note that by default the `private_key` value will contain new line characters (\n) which need to be removed prior to entering the private key into this field.  You can do a find and replace of `\n` with ` ` to remove these characters in a text editor and then wrap the lines manually before copying and pasting the certificate's value into the input box.
+    ![image alt text](./media/private-key-format.png)
+    
+    * iap.client_id: set this value to the Client ID of the the Identity Aware Proxy Client Application. This value will be found in the `APIs & Services > Credentials` of your GCP project under the `OAuth 2.0 client IDs` section in the `Client ID`  column.
+
+Your key value map should look similar to the following image:
+    ![image alt text](./media/key-value-map.png)
+    
+# Test the integration
+To test that the integration is working as expected, you will need to create a product which leverages the proxy we imported previously and register an application that consumes the product to get an API key.
 
 
 
