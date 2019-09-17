@@ -31,8 +31,20 @@ For the following steps, please log in to your Apigee Edge account.
 ### Deploy the SpringBoot App Engine Flex application
 The instructions for deploying the SpringBoot application can be found in the README file of the [`helloworld-springboot`](helloworld-springboot) directory. Please follow the steps in the README to deploy the App Engine Flex application and return to the steps below once complete.
 
+## Configuring GCP Resources
+The purpose of this example is to show you how you can leverage a service account created in GCP to enable service to service authentication when Apigee Edge is the calling client and the SpringBoot application we previously deployed to App Engine Flex is the application being called. 
+
+To facilitate this, we will configure a Google Cloud Platform service called Identity Aware Proxy (IAP) to protect the App Engine Flex application's resources and challenge the calling client for Identity. Only members of the GCP project with an IAM role of `IAP-secured Web App User` will be allowed to access the protected resources that Identity Aware Proxy restricts access to. In the next sections we will create a Service Account and configure Identity Aware Proxy.
+
+We must also configure an OAuth Client ID client
+
+
+
 ### Enable and configure Google Cloud Identity Aware Proxy (IAP)
 
+### Configure OAuth consent screen
+
+### Others?
 
 ### Create a Key Value Map
 The shared flow imported leverages a Key Value Map (KVM) to lookup values associated with your GCP project.  We will create a KVM in the following steps and set values for the service account and OAuth Client Credentials we will require for this example.
@@ -118,7 +130,7 @@ Next we need to deploy the proxy and switch over to the `Trace` tab:
     * ?apikey=((API KEY COPIED FROM EARLIER))
 7. Press send a few times and verify that you are receiving 200 responses back.
 
-Your trace view should look similar to the following image:
+Your trace view should look similar to the following image. **Take note of the Response Content Body** as it should return the message `Hello World!`.
     ![image alt text](./media/trace-view.png)
 
 
