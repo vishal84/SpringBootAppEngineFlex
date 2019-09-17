@@ -67,7 +67,37 @@ The GCP authentication shared flow leverages the cache to avoid authenticating w
 # Test the integration
 To test that the integration is working as expected, you will need to create a product which leverages the proxy we imported previously and register an application that consumes the product to get an API key.
 
+### Create an API Product
+1. Navigate to `Publich > API Products` in the left menu.
+2. Click the `+API Product` button in the top right corner of the screen.
+3. Enter the following parameters:
+    * Name: `SpringBoot Product`
+    * Display name: `SpringBoot Product`
+    * Access: `Public`
+4. Under the `API Resources` > `API Proxies` section click `add a proxy`.
+5. Select the checkbox for the `SpringBoot` proxy we created earlier and click `Add`.
 
+You should now have a form that looks like the following image:
+    ![image alt text](./media/register-application.png)
+
+6. Click on `Save` in the top right corner.
+
+### Create an Application
+1. Navigate to `Publish > Apps` in the left menu.
+2. Click the `+App` button in the top right corner of the screen.
+3. Enter the following parameters:
+    * Name: `SpringBoot App`
+    * Display name: `SpringBoot App`
+    * Select the `Developer` radio button and choose a developer that is registered with Apigee.
+4. Click `Add product` then select the `SpringBoot Product` checkbox and click `Add`.
+
+You should now have a form that looks like the following image:
+    ![image alt text](./media/add-spring-boot-product.png)
+    
+5. Click on `Create` in the top right corner.
+
+Once created, your application is assigned an API key and secret. You can find these on the resulting screen under the `Credentials` section. 
+6. Click `Show` next to the `Key` and copy the value to use at a later time.
 
 ### Apigee Community
 If you have any questions/comments please visit https://community.apigee.com/index.html
