@@ -67,9 +67,7 @@ gcloud components update
 ### Configure the `app.yaml` descriptor
 
 The [`app.yaml`][app-yaml] descriptor is used to describe URL
-dispatch and resource requirements.  This example sets
-[`manual_scaling`][manual-scaling] to 1 to minimize possible costs.
-These settings should be revisited for production use.
+dispatch and resource requirements. These settings should be revisited based on your requirements.
 
 [app-yaml]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml
 [manual-scaling]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml#manual-scaling
