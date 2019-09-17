@@ -80,7 +80,6 @@ To test that the integration is working as expected, you will need to create a p
 You should now have a form that looks like the following image:
     ![image alt text](./media/register-application.png)
 
-
 6. Click on `Save` in the top right corner.
 
 ### Create an Application
@@ -98,6 +97,7 @@ You should now have a form that looks like the following image:
 5. Click on `Create` in the top right corner.
 
 Once created, your application is assigned an API key and secret. You can find these on the resulting screen under the `Credentials` section. 
+
 6. Click `Show` next to the `Key` and copy the value to use at a later time.
 
 ### Apigee Community
