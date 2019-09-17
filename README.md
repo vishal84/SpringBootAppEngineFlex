@@ -78,7 +78,7 @@ To test that the integration is working as expected, you will need to create a p
 5. Select the checkbox for the `SpringBoot` proxy we created earlier and click `Add`.
 
 You should now have a form that looks like the following image:
-    ![image alt text](./media/register-application.png)
+    ![image alt text](./media/add-spring-boot-product.png)
 
 6. Click on `Save` in the top right corner.
 
@@ -92,7 +92,7 @@ You should now have a form that looks like the following image:
 4. Click `Add product` then select the `SpringBoot Product` checkbox and click `Add`.
 
 You should now have a form that looks like the following image:
-    ![image alt text](./media/add-spring-boot-product.png)
+    ![image alt text](./media/register-application.png)
     
 5. Click on `Create` in the top right corner.
 
