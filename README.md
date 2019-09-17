@@ -118,7 +118,7 @@ Next we need to deploy the proxy and switch over to the `Trace` tab:
     * ?apikey=((API KEY COPIED FROM EARLIER))
 7. Press send a few times and verify that you are receiving 200 responses back.
 
-Your trace view should look similar to the following image:
+Your trace view should look similar to the following image. **Take note of the Response Content Body** as it should return the message `Hello World!`.
     ![image alt text](./media/trace-view.png)
 
 
