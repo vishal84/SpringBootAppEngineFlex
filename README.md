@@ -44,7 +44,7 @@ The shared flow imported leverages a Key Value Map (KVM) to lookup values associ
 5. In the `GCP IAM` key value map screen enter in the following key/values. You will need to click on the `+` icon in the top right of the screen to add these values individually.
 
     * jwt_issuer: set this value to the `client_email` found in the service account JSON file downloaded from your GCP project.  You can download the service account JSON file from the `APIs & Services > Credentials` section of your GCP project.
-    ![image alt text](./media/api-credentials.png)
+    ![image alt text](./media/apis-credentials.png)
     
     * private_key_PEM: set this value to the `private_key` value found in the service account JSON file downloaded from your GCP project.  Please also note that by default the `private_key` value will contain new line characters (\n) which need to be removed prior to entering the private key into this field.  You can do a find and replace of `\n` with ` ` to remove these characters in a text editor and then wrap the lines manually before copying and pasting the certificate's value into the input box.
     ![image alt text](./media/private-key-format.png)
