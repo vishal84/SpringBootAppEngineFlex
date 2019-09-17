@@ -86,7 +86,7 @@ The [`pom.xml`](pom.xml) file in this directory references the `app-engine-maven
 
 ## Deploy to App Engine flexible environment
 
-1. Ensure that the App Engine environment is configured for split health checks:
+Ensure that the App Engine environment is configured for split health checks:
 1. Run the command `gcloud app describe`.
 1. Validate that the output under `featureSettings` contains `splitHealthChecks: true`.
 1. `mvn appengine:deploy`
