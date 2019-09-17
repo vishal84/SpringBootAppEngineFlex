@@ -80,6 +80,7 @@ To test that the integration is working as expected, you will need to create a p
 You should now have a form that looks like the following image:
     ![image alt text](./media/register-application.png)
 
+
 6. Click on `Save` in the top right corner.
 
 ### Create an Application
