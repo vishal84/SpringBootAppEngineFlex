@@ -9,7 +9,7 @@ Visit the following page to create a free trial Apigee account: https://login.ap
 
 ### Import the proxy bundle
 For the following steps, please log in to your Apigee Edge account.
-2. Navigate to Develop > API Proxies in the left menu.
+2. Navigate to `Develop > API Proxies` in the left menu.
 3. Click the `+Proxy` button in the top right hand corner of the screen.
 4. Select `Proxy bundle` and click `Next`.
 
@@ -23,7 +23,7 @@ For the following steps, please log in to your Apigee Edge account.
 7. Click `Build`.
 
 ### Import the shared flow bundle
-1. Navigate to Develop > Shared Flows in the left menu.
+1. Navigate to `Develop > Shared Flows` in the left menu.
 2. Click the `+Shared Flow` button in the top right hand corner of the screen and select `Upload bundle...` from the drop down.
 3. Select the `GCP-Auth_rev3_2019_09_17.zip` zip archive.
 4. Set the `Name:` to `GCP-Auth` and select `Create`.
@@ -37,7 +37,7 @@ The instructions for deploying the SpringBoot application can be found in the RE
 ### Create a Key Value Map
 The shared flow imported leverages a Key Value Map (KVM) to lookup values associated with your GCP project.  We will create a KVM in the following steps and set values for the service account and OAuth Client Credentials we will require for this example.
 
-1. Navigate to Admin > Environments > Key Value Maps
+1. Navigate to `Admin > Environments > Key Value Maps` in the left menu.
 2. Click the `+Key value map` in the top right corner of the screen.
 3. Enter `GCP IAM` as the `Name` and select the `Encrypted` checkbox.
 4. Once created, select the `GCP IAM` key value map by clicking on it.
@@ -53,7 +53,17 @@ The shared flow imported leverages a Key Value Map (KVM) to lookup values associ
 
 Your key value map should look similar to the following image:
     ![image alt text](./media/key-value-map.png)
-    
+
+### Create the Cache for the Shared Flow
+The GCP authentication shared flow leverages the cache to avoid authenticating with GCP each time a call is made to the IAP protected endpoint. We will need to create a cache that the shared flow leverages for this example.
+
+1. Navigate to `Admin > Environments > Caches` in the left menu.
+2. Click the `+Cache` button in the top right corner of the screen.
+3. Enter the following parameters:
+    * Name: `GCP IAM Cache`
+    * Expires: Set the value to **30** minutes.
+4. Click `Add Cache`.
+
 # Test the integration
 To test that the integration is working as expected, you will need to create a product which leverages the proxy we imported previously and register an application that consumes the product to get an API key.
 
