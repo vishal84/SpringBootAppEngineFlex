@@ -72,7 +72,7 @@ dispatch and resource requirements. These settings should be revised based on yo
 [app-yaml]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml
 [manual-scaling]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml#manual-scaling
 
-### Configure the `app-engine-maven` plugin parameters for App Engine in the `pom.xml` file
+### Configure the `app-engine-maven` plugin parameters in the `pom.xml` file
 
 The [`pom.xml`](pom.xml) file in this directory references the `app-engine-maven` plugin. Update the `<deploy.projectId>` and the `<deploy.version>` tags to values that correspond to your project and the version number you want to deploy to respectively.
 
