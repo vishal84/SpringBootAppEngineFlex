@@ -74,16 +74,23 @@ These settings should be revisited for production use.
 [app-yaml]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml
 [manual-scaling]: https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml#manual-scaling
 
+### Configure the `app-engine-maven` plugin parameters for App Engine in the `pom.xml` file
+
+The [`pom.xml`][pom.xml] file in this directory references the `app-engine-maven` plugin. Update the `<deploy.projectId>` and the `<deploy.version>` tags to values that correspond to your project and the version number you want to deploy to respectively.
+
 ## Run the application locally
 
 1. Set the correct Cloud SDK project via `gcloud config set project
    YOUR_PROJECT` to the ID of your application.
-1. Run `mvn spring-boot:run`
+1. Run `mvn spring-boot:run`.  You will need to ensure you are in the directory `helloworld-springboot`.
 1. Visit http://localhost:8080
 
 
 ## Deploy to App Engine flexible environment
 
+1. Ensure that the App Engine environment is configured for split health checks:
+1. Run the command `gcloud app describe`.
+1. Validate that the output under `featureSettings` contains `splitHealthChecks: true`.
 1. `mvn appengine:deploy`
 1. Visit `http://YOUR_PROJECT.appspot.com`.
 
