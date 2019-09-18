@@ -1,5 +1,9 @@
 # SpringBootAppEngineFlex
-This repo contains a sample App Engine Flex SpringBoot application and a sample Apigee Edge proxy which leverages a Shared Flow that enables authenticating to Google Cloud Platform's Identity Aware Proxy (IAP) with a GCP Service Account.  
+Google Cloud Platform (GCP) provides services such as App Engine and Google Kubernetes Engine (GKE) that allow developers and architects to easily create and expose APIs seamlessly. However, there are times when the APIs and services made available should not be publicly accessible. To avoid such a scenario Googe Cloud Identity Aware Proxy (IAP) can protect backend resources made available through GCP and challenge calling client applications for credentials before allowing ingress traffic to hit a layer 7 service.
+
+In addition, companies may want to incorporate services exposed by GCP as part of an API management program to allow first party and third party developers to easily sign up for a developer account, browse a catalog of available APIs and corresponding documentation, register for an API key and begin consuming API resources.  The use of the Apigee Edge platform and Identity Aware Proxy to proteect traffic sent to App Engine, GKE or other GCP services can facilitate this integration.
+
+This repo contains a sample App Engine Flex SpringBoot application and a sample Apigee Edge proxy which leverages a Shared Flow that enables authentication with Google Cloud Identity using a GCP Service Account and thereafter passes the access token returned by Cloud Identity to Identity Aware Proxy (IAP) to allow secure, service to service communication.
 
 ### Create the Apigee Edge proxy and shared flow
 You will need access to an Apigee account to create the proxy and shared flow needed to follow this example. If you don't have an account you can sign up for a free trial using the link below. 
