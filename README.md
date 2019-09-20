@@ -6,10 +6,9 @@ In addition, companies may want to incorporate services exposed by GCP as part o
 This repo contains a sample App Engine Flex SpringBoot application and a sample Apigee Edge proxy.  The sample proxy leverages a Shared Flow to enable authentication with Google Cloud Identity using a GCP Service Account. It does this by adding an audience claim to a JSON Web Token (JWT) minted by Apigee thats leveraged to authenticate with Google Cloud Identity. The token is passed as a Bearer token in the Authorization header sent to the endpoint protected by IAP.  The service account used in this context has the role "IAP-securedWebAppUser" which is required to allow access to web resources protected by IAP.  
 
 You can read more about how to use an OpenID Connect (OIDC) token to authenticate a service account to a Cloud IAP-secured resource at the link below: 
-
 https://cloud.google.com/iap/docs/authentication-howto#authenticating_from_a_service_account
 
-The flow of authentication calls is documented at the link here (See HTTP/REST tab):
+The flow of authentication calls is documented at the link here (See HTTP/REST tab): 
 https://developers.google.com/identity/protocols/OAuth2ServiceAccount#authorizingrequests
 
 Note that in this example Apigee Edge platform is leveraged to mint a JWT token rather than by writing boilerplate code i.e. it adds the required audience and issuer claims to the JWT, references the private key of the service account created in GCP and generates the token to pass to Cloud Identity to authenticate.
