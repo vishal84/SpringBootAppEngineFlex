@@ -48,12 +48,11 @@ For the following steps, please log in to your Apigee Edge account.
 The instructions for deploying the SpringBoot application can be found in the README file of the [`helloworld-springboot`](helloworld-springboot) directory. Please follow the steps in the README to deploy the App Engine Flex application and return to the steps below once complete.
 
 ## Configuring GCP Resources
-The purpose of this example is to show you how you can leverage a service account created in GCP to enable service to service authentication when Apigee Edge is the calling client and the SpringBoot application we previously deployed to App Engine Flex is the application being called. 
+The purpose of this example is to show you how you can leverage a service account created in GCP to enable service to service authentication when Apigee Edge is the calling client and the SpringBoot application we previously deployed to App Engine Flex is the IAP protected resource. 
 
-To facilitate this, we will configure a Google Cloud Platform service called Identity Aware Proxy (IAP) to protect the App Engine Flex application's resources and challenge the calling client for Identity. Only members of the GCP project with an IAM role of `IAP-secured Web App User` will be allowed to access the protected resources that Identity Aware Proxy restricts access to. In the next sections we will create a Service Account and configure Identity Aware Proxy.
+To facilitate this, we will configure Identity Aware Proxy (IAP) to allow the service account we create access to the resources our App Engine Flex application makes available by requiring calling clients to provide an authenticated Identity in the form of a JSON Web Token (JWT). Only members of the GCP project with an IAM role of `IAP-secured Web App User` will be allowed to access IAP's protected resources. In the next section, we will create a Service Account and configure Identity Aware Proxy.
 
-We must also configure an OAuth Client ID client
-
+### Create a Google Cloud Platform Service Account
 
 
 ### Enable and configure Google Cloud Identity Aware Proxy (IAP)
