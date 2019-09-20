@@ -14,8 +14,9 @@ The flow of authentication calls is documented at the link here (See HTTP/REST t
 https://developers.google.com/identity/protocols/OAuth2ServiceAccount#authorizingrequests
 
 
-Note that in this example Apigee Edge platform is leveraged to mint a JWT token rather than by writing boilerplate code i.e. it adds the required audience and issuer claims to the JWT, references the private key of the service account created in GCP and generates the token to pass to Cloud Identity to authenticate.
+Note that in this example the Apigee Edge platform is leveraged to mint a JWT token rather than writing boilerplate code i.e. it adds the required audience and issuer claims to a JWT, references the private key of the service account created in GCP and generates the JWT to pass to Cloud Identity to authenticate.  Once Cloud Identity sends a valid JWT back to Apigee, it adds that token to the outbound call to the IAP protected resource as an Authorization header (as a Bearer token).
 
+Let's get started.
 
 ### Create the Apigee Edge proxy and shared flow
 You will need access to an Apigee account to create the proxy and shared flow needed to follow this example. If you don't have an account you can sign up for a free trial using the link below. 
