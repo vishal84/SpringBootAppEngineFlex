@@ -53,13 +53,17 @@ The purpose of this example is to show you how you can leverage a service accoun
 To facilitate this, we will configure Identity Aware Proxy (IAP) to allow the service account we create access to the resources our App Engine Flex application makes available by requiring calling clients to provide an authenticated Identity in the form of a JSON Web Token (JWT). Only members of the GCP project with an IAM role of `IAP-secured Web App User` will be allowed to access IAP's protected resources. In the next section, we will create a Service Account and configure Identity Aware Proxy.
 
 ### Create a Google Cloud Platform Service Account
+Follow the instructions on the GCP documentation site to create a service account below:  
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating
 
+When completed download the service account key in JSON format to reference the private certificate for the account in the Key Value Map we create later in this lab.
 
 ### Enable and configure Google Cloud Identity Aware Proxy (IAP)
 
-### Configure OAuth consent screen
 
-### Others?
+### Configure OAuth consent screen
+Follow the instructions on the GCP documentation site to create an OAuth consent screen to be used with your application deployed to App Engine Flex:  
+https://support.google.com/cloud/answer/6158849?hl=en
 
 ### Create a Key Value Map
 The shared flow imported leverages a Key Value Map (KVM) to lookup values associated with your GCP project.  We will create a KVM in the following steps and set values for the service account and OAuth Client Credentials we will require for this example.
