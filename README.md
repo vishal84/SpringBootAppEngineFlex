@@ -59,7 +59,16 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating
 When completed download the service account key in JSON format to reference the private certificate for the account in the Key Value Map we create later in this lab.
 
 ### Enable and configure Google Cloud Identity Aware Proxy (IAP)
+To enable Identity Aware Proxy (IAP), perform the following steps in the GCP console:
 
+1. Navigate to `Security > Identity-Aware Proxy` in the left navigation menu.
+2. You should see the App Engine application you previously deployed earlier in this lab. Enable IAP on the application by clicking on the slider next to the application name.
+
+![image alt text](./media/iap-setup.png)
+
+3. After selecting the checkbox next to the application you would like to protect with IAP, hit the `Show Info Panel` link in the top right of the page.
+4. Click the `Add Member` button and do a search for the service account you created two steps prior.
+5. Add the role `IAP-securedWebAppUser` to the service account and click `Save`.
 
 ### Configure OAuth consent screen
 Follow the instructions on the GCP documentation site to create an OAuth consent screen to be used with your application deployed to App Engine Flex:  
