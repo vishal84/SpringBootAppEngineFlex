@@ -161,7 +161,7 @@ Next we need to deploy the proxy and switch over to the `Trace` tab:
 
 Your trace view should look similar to the following image. **Take note of the Response Content Body** as it should return the message `Hello World!`. Note that if you attempt to access the App Engine Flex application service directly by hitting the appspot URL you will be challenged for credentials and not be allowed through.
 
-    ![image alt text](./media/trace-view.png)
+![image alt text](./media/trace-view.png)
 
 
 ### Apigee Community
